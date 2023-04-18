@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Logo }}</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link href="https: //fonts.googleapis.com/css2?family= Lora & display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top-block">
+      <header class="top-block__menu menu">
+        <span class="menu__nav-logo">{{ .Logo }}</span>
+        <nav class="menu__nav">
+          <a class="menu__nav-text" href="#">{{ .Home }}</a>
+          <a class="menu__nav-text" href="#">{{ .Categories }}</a>
+          <a class="menu__nav-text" href="#">{{ .About }}</a>
+          <a class="menu__nav-text" href="#">{{ .Contact }}</a>
+        </nav>
+      </header>
+      <div>
+        <h1 class="top-block__header">{{ .PageTitle }}</h1>
+        <p class="top-block__line">{{ .PageSubtitle }}</p>
+        <div href="#" class="top-block__button">{{ .PageButton }}</div>
+      </div>
+    </div> 
+    <section class="section">
+      <nav class="section__menu">
+        <a class="section__menu-text" href="#">{{ .MenuNature }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuPhotography }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuRelaxation }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuVacation }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuTravel }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuAdventure }}</a>
+      </nav>
+      <div class="section__main-posts">
+        <h2 class="section__header">{{ .MainTitle }}</h2>
+      </div>
+      <div class="main-post">
+        <div class="main-post__left"> 
+          <h4 class="main-post__header">{{ .LeftMainPostHeader }}</h4>
+          <p class="main-post__text">{{ .LeftMainPostText }}</p>
+          <a href="the-road-ahead.html"></a>
+          <div class="main-post-author">
+            <img class="main-post-author__foto" src="static/images/mat_vogels.jpg" alt="mat vogels">
+            <span class="main-post-author__text">{{ .LeftMainPostAuthor }}</span>
+            <span class="main-post-author__data">{{ .LeftMainPostData }}</span>
+          </div>
+        </div>
+        <div class="main-post__right">
+          <div class="main-post__button" href="#">Adventure</div>
+          <h4 class="main-post__header">{{ .RightMainPostHeader }}</h4>
+          <p class="main-post__text">{{ .RightMainPostText }}</p>
+          <a href="from-top-down.html"></a>
+          <div class="main-post-author">
+            <img class="main-post-author__foto" src="static/images/william_wong.jpg" alt="william Wong">
+            <span class="main-post-author__text">{{ .RightMainPostAuthor }}</span>
+            <span class="main-post-author__data">{{ .RightMainPostData }}</span>
+          </div> 
+        </div>
+      </div> 
+      <div class="section__posts">
+        <h2 class="section__posts-header">{{ .Title }}</h2>
+      </div>
+      <div class="posts">
+        <div class="post">
+          <img src="static/images/still_standing_tall.jpg" alt="still standing tall">
+          <div class="post__centr">
+            <h4 class="post__header">{{ .PostHeader1 }}</h4>
+            <p class="post__text">{{ .PostText1 }}</p>
+          </div>
+          <a href="still-Standing-Tall.html"></a>
+          <div class="post__footer">
+            <img class="post__autor-foto" src="static/images/william_wong.jpg" alt="william wong">
+            <span class="post__autor-name">{{ .PostAuthor1 }}</span>
+            <span class="post__data">{{ .PostData1 }}</span>
+          </div> 
+        </div>
+        <div class="post">
+          <img src="static/images/sunny_side_up.jpg" alt="sunny side up">
+          <div class="post__centr">
+            <h4 class="post__header">{{ .PostHeader2 }}</h4>
+            <p class="post__text">{{ .PostText2 }}</p>
+          </div>
+          <a href="sunny-side-up.html"></a>
+          <div class="post__footer">
+            <img class="post__autor-foto" src="static/images/mat_vogels.jpg" alt="mat vogels">
+            <span class="post__autor-name">{{ .PostAuthor2 }}</span>
+            <span class="post__data">{{ .PostData2 }}</span>
+          </div> 
+        </div>
+        <div class="post">
+          <img src="static/images/water_falls.jpg" alt="water falls">
+          <div class="post__centr">
+            <h4 class="post__header">{{ .PostHeader3 }}</h4>
+            <p class="post__text">{{ .PostText3 }}</p>
+          </div>
+          <a href="water-falls.html"></a>   
+          <div class="post__footer">
+            <img class="post__autor-foto" src="static/images/mat_vogels.jpg" alt="mat vogels">
+            <span class="post__autor-name">{{ .PostAuthor3 }}</span>
+            <span class="post__data">{{ .PostData3 }}</span>
+          </div>    
+        </div>
+        <div class="post">
+          <img src="static/images/through_the_mist.jpg" alt="through the mist">
+          <div class="post__centr">
+            <h4 class="post__header">{{ .PostHeader4 }}</h4>
+            <p class="post__text">{{ .PostText4 }}</p>
+          </div>
+          <a href="through-the-mist.html"></a>
+          <div class="post__footer">
+            <img class="post__autor-foto" src="static/images/william_wong.jpg" alt="william wong">
+            <span class="post__autor-name">{{ .PostAuthor4 }}</span>
+            <span class="post__data">{{ .PostData4 }}</span>
+          </div>  
+        </div>    
+        <div class="post">
+          <img src="static/images/awaken_early.jpg" alt="awaken early">
+          <div class="post__centr">
+            <h4 class="post__header">{{ .PostHeader5 }}</h4>
+            <p class="post__text">{{ .PostText5 }}</p>
+          </div>
+          <a href="awaken-early.html"></a>    
+          <div class="post__footer">
+            <img class="post__autor-foto" src="static/images/mat_vogels.jpg" alt="mat vogels">
+            <span class="post__autor-name">{{ .PostAuthor5 }}</span>
+            <span class="post__data">{{ .PostData5 }}</span>
+          </div>    
+        </div>
+        <div class="post">
+          <img src="static/images/try_it_always.jpg" alt="try it always">
+          <div class="post__centr">
+            <h4 class="post__header">{{ .PostHeader6 }}</h4>
+            <p class="post__text">{{ .PostText6 }}</p>
+          </div>
+          <a href="try-it-always.html"></a>
+          <div class="post__footer">
+            <img class="post__autor-foto" src="static/images/mat_vogels.jpg" alt="mat vogels">
+            <span class="post__autor-name">{{ .PostAuthor6 }}</span>
+            <span class="post__data">{{ .PostData6 }}</span>
+          </div>   
+        </div>
+      </div>
+    </section>
+    <footer class="footers">
+      <div class="footer-search">
+        <span class="footer-search__bottom-header">{{ .BottomHeader }}</span>
+      </div>
+      <div class="footer-search">
+        <form class="footer-search__search">
+          <input class="footer-search__input" type="text" placeholder="Enter your email address">
+        </form>
+        <div class="footer-search__button" href="#">{{ .BottomButton }}</div>
+      </div>
+      <div class="footer">
+        <span class="footer__logo">{{ .Logo }}</span>
+        <nav class="footer__nav">
+          <a class="footer__nav-text" href="#">{{ .Home }}</a>
+          <a class="footer__nav-text" href="#">{{ .Categories }}</a>
+          <a class="footer__nav-text" href="#">{{ .About }}</a>
+          <a class="footer__nav-text" href="#">{{ .Contact }}</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

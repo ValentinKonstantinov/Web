@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Logo }}</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link href="https: //fonts.googleapis.com/css2?family= Lora & display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top-block">
+      <header class="top-block__menu menu">
+        <span class="menu__nav-logo">{{ .Logo }}</span>
+        <nav class="menu__nav">
+          <a class="menu__nav-text" href="#">{{ .Home }}</a>
+          <a class="menu__nav-text" href="#">{{ .Categories }}</a>
+          <a class="menu__nav-text" href="#">{{ .About }}</a>
+          <a class="menu__nav-text" href="#">{{ .Contact }}</a>
+        </nav>
+      </header>
+      <div>
+        <h1 class="top-block__header">{{ .PageTitle }}</h1>
+        <p class="top-block__line">{{ .PageSubtitle }}</p>
+        <div href="#" class="top-block__button">{{ .PageButton }}</div>
+      </div>
+    </div> 
+    <section class="section">
+      <nav class="section__menu">
+        <a class="section__menu-text" href="#">{{ .MenuNature }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuPhotography }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuRelaxation }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuVacation }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuTravel }}</a>
+        <a class="section__menu-text" href="#">{{ .MenuAdventure }}</a>
+      </nav>
+      <div class="section__main-posts">
+        <h2 class="section__header">{{ .MainTitle }}</h2>
+      </div>
+      <div class="main-posts">
+      {{ range .Featured }}
+        <div class="main-post" style="background-image: url('{{ .PostImageUrl }}');">
+          {{ if .PostCategory }}
+          <div class="main-post__button" href="#">{{ .PostCategory }}</div>
+          {{ end }}
+          <h4 class="main-post__header">{{ .PostHeader }}</h4>
+          <p class="main-post__text">{{ .PostText }}</p>
+          <a href="from-top-down.html"></a>
+          <div class="main-post-author">
+            <img class="main-post-author__foto" src="{{ .PostAuthorUrl }}" alt="{{ .PostAuthor }}">
+            <span class="main-post-author__text">{{ .PostAuthor }}</span>
+            <span class="main-post-author__data">{{ .PublishDate }}</span>
+          </div> 
+        </div>
+      {{ end }}
+      </div> 
+      <div class="section__posts">
+        <h2 class="section__posts-header">{{ .Title }}</h2>
+      </div>
+      <div class="posts">
+      {{ range .PostsData }}
+        <div class="post">
+          <img src="{{ .PostImageUrl }}" alt="{{ .PostHeader }}">
+          <div class="post__centr">
+            <h4 class="post__header">{{ .PostHeader }}</h4>
+            <p class="post__text">{{ .PostText }}</p>
+          </div>
+          <a href="still-Standing-Tall.html"></a>
+          <div class="post__footer">
+            <img class="post__autor-foto" src="{{ .PostAuthorUrl }}" alt="{{ .PostAuthor }}">
+            <span class="post__autor-name">{{ .PostAuthor }}</span>
+            <span class="post__data">{{ .PublishDate }}</span>
+          </div> 
+        </div>
+      {{ end }}
+      </div>
+    </section>
+    <footer class="footers">
+      <div class="footer-search">
+        <span class="footer-search__bottom-header">{{ .BottomHeader }}</span>
+      </div>
+      <div class="footer-search__form">
+        <form class="footer-search__search">
+          <input class="footer-search__input" type="text" placeholder="Enter your email address">
+        </form>
+        <div class="footer-search__button" href="#">{{ .BottomButton }}</div>
+      </div>
+      <div class="footer__fon">
+        <div class="footer">
+          <span class="footer__logo">{{ .Logo }}</span>
+          <nav class="footer__nav">
+            <a class="footer__nav-text" href="#">{{ .Home }}</a>
+            <a class="footer__nav-text" href="#">{{ .Categories }}</a>
+            <a class="footer__nav-text" href="#">{{ .About }}</a>
+            <a class="footer__nav-text" href="#">{{ .Contact }}</a>
+          </nav>
+        </div>
+      </div> 
+    </footer>
+  </body>
+</html>
